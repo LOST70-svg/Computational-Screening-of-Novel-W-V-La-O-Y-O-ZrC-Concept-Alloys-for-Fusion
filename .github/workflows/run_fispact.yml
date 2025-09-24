@@ -1,0 +1,18 @@
+name: Run FISPACT-II
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fispact:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run FISPACT-II
+        run: |
+          cd simulations/material_A+_analysis
+          bash scripts/run_fispact.sh
+      - name: Parse FISPACT
+        run: |
+          cd simulations/material_A+_analysis
+          python scripts/parse_fispact.py
