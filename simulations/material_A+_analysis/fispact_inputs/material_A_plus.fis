@@ -1,0 +1,32 @@
+TITLE Material A+ Activation
+
+MATERIAL
+  W 96.95
+  V 3.00
+  La2O3 0.05
+  ZrC 0.01
+  Y2O3 0.05
+END
+
+SPECTRUM ITER_SPECTRUM DAT
+# Replace this block with a validated neutron spectrum file
+0.001 1.0e-8
+0.1   1.0e-6
+1.0   1.0e-4
+14.1  1.0
+END
+
+IRRAD
+  PROCEDURE name=ITER_case
+  FLUX 1e14 n/cm2/s
+  TIME 10.0 y
+  SPECTRUM ITER_SPECTRUM
+END
+
+COOLING
+  1 d
+  30 d
+  365 d
+END
+
+OUTPUT JSON
