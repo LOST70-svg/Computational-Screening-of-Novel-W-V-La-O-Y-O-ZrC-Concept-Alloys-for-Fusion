@@ -1,0 +1,23 @@
+initial:
+  swelling: 0.05
+  K_IC: 19.5
+  T_ret: 0.0
+  dose: 0.0
+
+swelling:
+  coefficient: 0.12
+  exponent: 0.65
+
+toughness:
+  degradation_rate: 0.06
+  min_value: 7.5
+
+tritium:
+  saturation: 1.8e16
+  uptake_rate: 1.0e4
+  base_release: 1.8e-3
+  dpa_factor: 0.3
+
+dose:
+  base_growth: 85
+  exponent: 0.8
